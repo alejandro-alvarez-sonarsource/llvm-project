@@ -10,6 +10,7 @@
 #endif
 
 typedef __typeof(sizeof(int)) size_t;
+typedef long ssize_t;
 typedef long long __int64_t;
 typedef __int64_t __darwin_off_t;
 typedef __darwin_off_t fpos_t;
@@ -75,6 +76,9 @@ int fflush(FILE *stream);
 
 
 int getc(FILE *stream);
+
+ssize_t getline(char **restrict lineptr, size_t *restrict n, FILE *restrict stream);
+ssize_t getdelim(char **restrict lineptr, size_t *restrict n, int delim, FILE *restrict stream);
 
 size_t strlen(const char *);
 
