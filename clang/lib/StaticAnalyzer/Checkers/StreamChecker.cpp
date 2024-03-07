@@ -1281,8 +1281,6 @@ void StreamChecker::preGetdelim(const FnDescription *Desc,
     const StreamState *SS = State->get<StreamMap>(Sym);
     if (SS->ErrorState & ErrorFEof)
       reportFEofWarning(Sym, C, State);
-  } else {
-    C.addTransition(State);
   }
 }
 
